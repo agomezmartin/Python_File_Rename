@@ -1,6 +1,6 @@
-# File rename script
+# Python script: </br> rename files and update HTML attributes
 
-Operating Systems (OS) allow to create very powerful **automation proccesses**. However, in order NOT to be OS-dependant when creating smaller automation processes, developing these in a programming language other than the OS's might help create more scalable scripts.
+Operating Systems (OS) allow to create very powerful **automation proccesses**. However, in order NOT to be OS-dependant when creating smaller automation processes, developing these in a programming language might help create more scalable scripts.
 
 On that note, programming languages tend to have more powerful tools to **write into files**.
 
