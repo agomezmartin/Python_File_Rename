@@ -31,6 +31,10 @@ def fileUpdate(actualFile, languageCode, languageName):
 
     file.close()
 
+    createFile(actualFile, languageCode, languageName)
+
+def createFile(actualFile, languageCode, languageName):
+
     path = actualFile.split("/")
     fileName = path[2]
     print("File name: ",fileName)
@@ -38,12 +42,21 @@ def fileUpdate(actualFile, languageCode, languageName):
     new_name = fileRename(fileName, languageCode, languageName)
     print("New file name: ",new_name)
     path[2] = new_name
+    path[1] = "Finished_target_files"
     print("Path: ",path)
 
-    newPath = "/".join(path)
-    print("Joined Path: ",newPath)
+    newFile = "/".join(path)
+    print("Joined Path: ",newFile)
 
-    os.rename(actualFile, newPath)
+    # New Directory is created
+    newPath = "./Finished_target_files/"
+    print("New Path: ", newPath)
+    # Check whether the specified path exists or not
+    if not os.path.exists(newPath):
+        os.makedirs(newPath)
+
+    # File is remaed into new directory
+    os.rename(actualFile, newFile)
 
 def fileRename(fileName, languageCode, languageName):
 

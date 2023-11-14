@@ -1,7 +1,7 @@
 import os
 import functions as f
 
-path = "./File-Directory-English-File/"
+path = "./Directory-Target-Files/"
 
 for file in os.listdir(path):
     print("===============================")
