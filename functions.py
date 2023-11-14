@@ -42,14 +42,14 @@ def createFile(actualFile, languageCode, languageName):
     new_name = fileRename(fileName, languageCode, languageName)
     print("New file name: ",new_name)
     path[2] = new_name
-    path[1] = "Finished_target_files"
+    path[1] = "Final_target_files"
     print("Path: ",path)
 
     newFile = "/".join(path)
     print("Joined Path: ",newFile)
 
     # New Directory is created
-    newPath = "./Finished_target_files/"
+    newPath = "./Final_target_files/"
     print("New Path: ", newPath)
     # Check whether the specified path exists or not
     if not os.path.exists(newPath):
