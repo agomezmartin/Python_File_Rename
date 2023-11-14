@@ -25,9 +25,8 @@ def fileUpdate(actualFile, languageCode, languageName):
         actualFile,
         "w")
 
-    # new content is pasted into file
-    for line in soup:
-        file.write(str(line))  # str() writes content matching source file format
+    # new content is writen into the file
+    file.write(str(soup))  # str() writes content matching source file format
 
     file.close()
 

@@ -35,3 +35,7 @@ Test-file-English-794562.html
 ## HTML attributes to update
 
 <img src="\images\html_codes.png">
+
+## Updated HTML attributes
+
+<img src="\images\html_updated.png">
