@@ -1,6 +1,6 @@
 # File rename script
 
-Operating Systems (OS) allow to create very powerful **automation proccesses**. However, in order NOT to be OS-dependant when creating smaller automation proccesses, developing these processes in a programming language other thatn the OS's might help make them more scalable.
+Operating Systems (OS) allow to create very powerful **automation proccesses**. However, in order NOT to be OS-dependant when creating smaller automation proccesses, developing these processes in a programming language other thatn the OS's might help make theese procceses more scalable.
 
 The following script **uses Python** to:
 
@@ -31,3 +31,7 @@ Test-file-English-794562.html
 - Test-file-Greek-794562.html
 - Test-file-Italian(Italy)-794562.html
 - Test-file-Spanish(Spain)-794562.html
+
+## HTML attributes to update
+
+<img src="\images\html_codes.png">
