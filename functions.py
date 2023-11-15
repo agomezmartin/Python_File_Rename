@@ -1,5 +1,8 @@
 import os
 from bs4 import BeautifulSoup
+import gettext
+
+_ = gettext.gettext
 
 def fileRead(actualFile):
     # HTML file is parsed into a BeautifulSoup object
@@ -17,8 +20,8 @@ def fileUpdate(actualFile, languageCode, languageName):
     html_tag['lang'] = languageCode #'it_IT'
     html_tag['xml:lang'] = languageCode #'it_IT'
 
-    print("Language code updated to: ", languageCode)
-    print("Language in file name updated to: ", languageName)
+    print(_("Language code updated to: "), languageCode)
+    print(_("Language in file name updated to: "), languageName)
 
     # open file
     file = open(
@@ -36,20 +39,20 @@ def createNewFile(actualFile, languageCode, languageName):
 
     path = actualFile.split("/")
     fileName = path[2]
-    print("File name: ",fileName)
+    print(_("File name: "),fileName)
 
     new_name = fileRename(fileName, languageCode, languageName)
-    print("New file name: ",new_name)
+    print(_("New file name: "),new_name)
     path[2] = new_name
     path[1] = "Final_target_files"
     # print("Path: ",path)
 
     newFile = "/".join(path)
-    print("New file path: ",newFile)
+    print(_("New file path: "),newFile)
 
     # New Directory is created
     newPath = "./Final_target_files/"
-    print("New Path: ", newPath)
+    print(_("New Path: "), newPath)
     # Check whether the specified path exists or not
     if not os.path.exists(newPath):
         os.makedirs(newPath)
