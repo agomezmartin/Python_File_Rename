@@ -18,7 +18,7 @@ def fileUpdate(actualFile, languageCode, languageName):
     html_tag['xml:lang'] = languageCode #'it_IT'
 
     print("Language code updated to: ", languageCode)
-    print("Language updated to: ", languageName)
+    print("Language in file name updated to: ", languageName)
 
     # open file
     file = open(
@@ -30,9 +30,9 @@ def fileUpdate(actualFile, languageCode, languageName):
 
     file.close()
 
-    createFile(actualFile, languageCode, languageName)
+    createNewFile(actualFile, languageCode, languageName)
 
-def createFile(actualFile, languageCode, languageName):
+def createNewFile(actualFile, languageCode, languageName):
 
     path = actualFile.split("/")
     fileName = path[2]
@@ -42,10 +42,10 @@ def createFile(actualFile, languageCode, languageName):
     print("New file name: ",new_name)
     path[2] = new_name
     path[1] = "Final_target_files"
-    print("Path: ",path)
+    # print("Path: ",path)
 
     newFile = "/".join(path)
-    print("Joined Path: ",newFile)
+    print("New file path: ",newFile)
 
     # New Directory is created
     newPath = "./Final_target_files/"
@@ -59,5 +59,6 @@ def createFile(actualFile, languageCode, languageName):
 
 def fileRename(fileName, languageCode, languageName):
 
+    languageCode = languageCode.replace("-","_")
     new_name = fileName.replace('English', languageName).replace(languageCode,'').replace('_', '')
     return new_name
