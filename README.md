@@ -25,8 +25,8 @@ Test-file-English-794562.html
 
 ## Final target files after executing the Python script
 
-- Test-file-French(FR)-794562.html
-- Test-file-German-794562.html
+- Test-file-French(France)-794562.html
+- Test-file-German(Germany)-794562.html
 - Test-file-Greek-794562.html
 - Test-file-Italian(Italy)-794562.html
 - Test-file-Spanish(Spain)-794562.html
