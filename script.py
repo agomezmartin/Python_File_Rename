@@ -8,13 +8,13 @@ for file in os.listdir(path):
     actualFile = path + file
     print("Actual file: ", actualFile)
     if file.__contains__("de_DE"):
-        f.fileUpdate(actualFile, "de-DE", "German")
+        f.fileUpdate(actualFile, "de-DE", "German(Germany)")
         continue
     if file.__contains__("el_GR"):
         f.fileUpdate(actualFile, "el-GR", "Greek")
         continue
     if file.__contains__("fr_FR"):
-        f.fileUpdate(actualFile, "fr-FR", "French(FR)")
+        f.fileUpdate(actualFile, "fr-FR", "French(France)")
         continue
     if file.__contains__("es_ES"):
         f.fileUpdate(actualFile, "es-ES", "Spanish(Spain)")
