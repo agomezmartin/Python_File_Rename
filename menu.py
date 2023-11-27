@@ -5,10 +5,17 @@ import gettext
 _ = gettext.gettext
 
 path = "./Directory-Target-Files/"
-option = int(input(_("Inserte una opcion:")))
+def menu():
+    print("Selecciones una opción:")
+    print()
+    print("1. Convertir archivos")
+    print("2. Salir")
+
+menu()
+option = int(input())
 print(type(option))
 
-while option == 2:
+while option != 2:
     match option:
         case 1:
             for file in os.listdir(path):
@@ -31,6 +38,7 @@ while option == 2:
                     f.fileUpdate(actualFile, "it-IT", "Italian(Italy)")
                     continue
             print("===============================")
-    option = input(_("Inserte una opcion:"))
+    menu()
+    option = input()
 
 print(_("Gracias por usar la aplicación"))
